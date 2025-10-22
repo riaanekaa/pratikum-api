@@ -17,15 +17,17 @@
             <h6 class="m-0 font-weight-bold text-primary">Tambah Fakultas</h6>
         </div>
         <div class="card-body">
-            <form>
+            <form action="{{ route('fakultas.store') }}" method="post">
+
+            @csrf
                 <div class="form-group">
                     <label for="nama_fakultas">Nama Fakultas</label>
-                    <input type="text" class="form-control" id="namafakultas" nama="nama_fakultas" placeholder="masukan nama fakultas">
+                    <input type="text" class="form-control" id="namafakultas" name="nama_fakultas" placeholder="masukan nama fakultas">
                 </div>
 
                 <div class="form-group">
                     <label for="kode_fakultas">Kode Fakultas</label>
-                    <input type="text" class="form-control" id="kode_fakultas" nama="kode_fakultas" placeholder="masukan kode fakultas">
+                    <input type="text" class="form-control" id="kode_fakultas" name="kode_fakultas" placeholder="masukan kode fakultas">
                 </div>
 
                 <div class="form-group">

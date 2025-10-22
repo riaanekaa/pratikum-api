@@ -29,7 +29,12 @@ class FakultasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $fakultas = Fakultas::create([
+            'nama_fakultas' => $request->nama_fakultas,
+            'kode_fakultas' => $request->kode_fakultas,
+        ]);
+
+        return redirect()->route('fakultas.index');
     }
 
     /**

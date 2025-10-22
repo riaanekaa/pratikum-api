@@ -21,6 +21,9 @@ Route::get('fakultas', [FakultasController::class, 'index'])->name('fakultas.ind
 
 Route::get('fakultas/create', [FakultasController::class, 'create'])->name('fakultas.create');
 
+Route::post('fakultas/store', [FakultasController::class, 'store'])->name('fakultas.store');
+
+
 
 
 
