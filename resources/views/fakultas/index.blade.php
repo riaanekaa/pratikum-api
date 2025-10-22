@@ -20,20 +20,20 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>no</th>
-                                            <th>nama fakultas</th>
-                                            <th>kode fakultas</th>
+                                            <th>No</th>
+                                            <th>Nama Fakultas</th>
+                                            <th>Kode Fakultas</th>
             
                                         </tr>
                                     </thead>
-                                    <tfoot>
+                                    <!-- <tfoot>
                                         <tr>
                                             <th>no</th>
                                             <th>nama fakultas</th>
                                             <th>kode fakultas</th>
                                         
                                         </tr>
-                                    </tfoot>
+                                    </tfoot> -->
                                     <tbody>
 
                                     @foreach ($fakultas as $item )
