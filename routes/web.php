@@ -19,6 +19,8 @@ Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.
 
 Route::get('fakultas', [FakultasController::class, 'index'])->name('fakultas.index');
 
+Route::get('fakultas/create', [FakultasController::class, 'create'])->name('fakultas.create');
+
 
 
 
