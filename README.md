@@ -1,12 +1,12 @@
 ## OKTA BENALDI
 ## Membuat Controller
-php artisan make:controller -r
-php artisan make:migration 
+1.php artisan make:controller -r
+2.php artisan make:migration 
 
 ## Push Ke GitHub
-git add .
-gitt commit 
-git push
+-git add .
+-gitt commit 
+-git push
 
 
 
