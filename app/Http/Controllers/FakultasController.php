@@ -50,7 +50,9 @@ class FakultasController extends Controller
      */
     public function edit(string $id)
     {
-        //
+
+        $fakultas = Fakultas::find($id); 
+        return view ('fakultas.edit',compact('fakultas'));
     }
 
     /**
@@ -58,7 +60,13 @@ class FakultasController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $fakultas = Fakultas::find($id);
+        $fakultas->update([
+            'nama_fakultas'=> $request->nama_fakultas,
+            'kode_fakultas'=> $request->kode_fakultas,
+        ]);
+
+        return redirect()->route('fakultas.index');
     }
 
     /**
@@ -66,6 +74,9 @@ class FakultasController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $fakultas = Fakultas::find($id);
+        $fakultas->delete();
+        return redirect()->route('fakultas.index');
+
     }
 }

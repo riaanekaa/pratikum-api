@@ -23,6 +23,10 @@ Route::get('fakultas/create', [FakultasController::class, 'create'])->name('faku
 
 Route::post('fakultas/store', [FakultasController::class, 'store'])->name('fakultas.store');
 
+Route::get('fakultas/edit/{id}', [FakultasController::class, 'edit'])->name('fakultas.edit');
+Route::post('fakultas/update/{id}', [FakultasController::class, 'update'])->name('fakultas.update');
+route::get('/fakultas/hapus/{id}', [FakultasController::class, 'destroy'])->name(name:'fakultas.hapus');
+
 
 
 
