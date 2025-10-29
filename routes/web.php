@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FakultasController;
 use App\Http\Controllers\ProdiController;
+use App\Http\Controllers\DosenController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -44,8 +45,26 @@ Route::post('prodi/update/{id}', [ProdiController::class, 'update'])->name('prod
 
 Route::get('/prodi/hapus/{id}', [ProdiController::class, 'destroy'])->name(name:'prodi.hapus');
 
-
 Route::resource('prodi', ProdiController::class);
+
+
+
+Route::get('dosen', [DosenController::class, 'index'])->name('dosen.index');
+
+Route::get('dosen/create', [DosenController::class, 'create'])->name('dosen.create');
+
+Route::post('dosen/store', [DosenController::class, 'store'])->name('dosen.store');
+
+Route::get('dosen/edit/{id}', [DosenController::class, 'edit'])->name('dosen.edit');
+
+Route::post('dosen/update/{id}', [ProdiController::class, 'update'])->name('dosen.update');
+
+Route::get('/dosen/hapus/{id}', [DosenController::class, 'destroy'])->name(name:'dosen.hapus');
+
+
+Route::resource('dosen', DosenController::class);
+
+
 
 
 

@@ -9,7 +9,8 @@
     <h1 class="h3 mb-2 text-gray-800">Daftar prodi</h1>
     <a href="" class="btn btn-primary mb-4">Tambah Prodi</a>
 
-
+@csrf
+@method('PUT')
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">

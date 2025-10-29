@@ -30,9 +30,13 @@
                     <span>Prodi</span></a>
             </li>
 
-            
+             <li class="nav-item active">
+                <a class="nav-link" href="{{ route('dosen.index') }}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dosen</span></a>
+            </li>
 
-           
+            
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
