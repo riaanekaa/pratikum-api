@@ -1,7 +1,7 @@
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #1f2937">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard.index') }}">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -14,15 +14,35 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="{{ route('dashboard.index') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-fw fa-home"></i>
                     <span>Dashboard</span></a>
             </li>
 
-               <li class="nav-item active">
+            <li class="nav-item active">
                 <a class="nav-link" href="{{ route('fakultas.index') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Fakultas</span></a>
             </li>
+
+             <li class="nav-item active">
+                <a class="nav-link" href="{{ route('prodi.index') }}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Prodi</span></a>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ route('dosen.index') }}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dosen</span></a>
+            </li>
+
+             <li class="nav-item active">
+                <a class="nav-link" href="{{ route('mahasiswa.index') }}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Mahasiswa</span></a>
+            </li>
+
+          
 
            
 
