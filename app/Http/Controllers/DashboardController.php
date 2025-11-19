@@ -3,20 +3,25 @@
 namespace App\Http\Controllers;
 
 use App\Models\Fakultas;
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        $fakultas = Fakultas::first();
+   
+   public function index(){
 
-      
-        return view('welcome', compact('fakultas'));
-    }
+    $fakultas = Fakultas::all();
+    $prodi = Prodi::all();
+    return view('welcome', compact('fakultas','prodi'));
+
+   }
+
+
+
+
+
+
 
     /**
      * Show the form for creating a new resource.
