@@ -26,7 +26,19 @@ class MahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'nama_mahasiswa' => 'required',
+            'nim_mahasiswa' => 'required',
+            'fakultas_id' => 'required'
+        ]);
+        
+        $mahasiswa = Mahasiswa::create($validate);
+        return response()->json([
+            'status' => true,
+            'message' => "Data Berhasil Diambahkan",
+            'data' => $mahasiswa
+        ], 200);
+
     }
 
     /**

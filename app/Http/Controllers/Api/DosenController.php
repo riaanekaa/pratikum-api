@@ -26,7 +26,17 @@ class DosenController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'nama_dosen' => 'required',
+            'nid_dosen' => 'required'
+        ]);
+        
+        $dosen = Dosen::create($validate);
+        return response()->json([
+            'status' => true,
+            'message' => "Data Berhasil Diambahkan",
+            'data' => $dosen
+        ], 200);
     }
 
     /**

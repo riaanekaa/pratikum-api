@@ -26,7 +26,18 @@ class FakultasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validate = $request->validate([
+            'nama_fakultas' => 'required',
+            'kode_fakultas' => 'required|unique:fakultas,kode_fakultas',
+        ]);
+        
+        $fakultas = Fakultas::create($validate);
+        return response()->json([
+            'status' => true,
+            'message' => "Data Berhasil Diambahkan",
+            'data' => $fakultas
+        ], 200);
+
     }
 
     /**

@@ -20,12 +20,14 @@ class FakultasController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validate = $request->validate([
             'nama_fakultas' => 'required',
             'kode_fakultas' => 'required|unique:fakultas,kode_fakultas',
         ]);
 
-        Fakultas::create($request->only(['nama_fakultas', 'kode_fakultas']));
+        $fakultas = Fakultas::create($validate);
+
+        
         return redirect()->route('fakultas.index')->with('success', 'Data berhasil ditambahkan.');
     }
 
